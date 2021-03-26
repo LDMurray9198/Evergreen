@@ -28,6 +28,15 @@ Route::get('/register', function(){
 Route::get('/signup', function(){
 	return View::make('pages.signup');
 });
+Route::get('/createcompany', function(){
+	return View::make('pages.createcompany');
+});
+Route::post('/create', function(){
+	return View::make('pages.create');
+});
+Route::view('form','pages.insertcompany');
+Route::post('submit', 'App\Http\Controllers\CompanyInsertController@save');
+
 Route::get('/customers', function(){
 $customer = DB::table('customers')->latest()->get();
 	return View::make('pages.customers',['customer' => $customer]);
@@ -37,5 +46,6 @@ Route::get('/customers/{id}', function($id){
 $customer = DB::table('customers')->find($id);
 	return View::make('pages.details',['customer' => $customer]);
 });
+
 
 

@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('content')
+	<a href ="/createcompany">Insert a new company</a>
 	Customer records will be below
 	
 <ul>
