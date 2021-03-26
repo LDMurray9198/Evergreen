@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+
 class CompanyInsertController extends Controller
 {
     function save(Request $request){
@@ -15,5 +16,11 @@ class CompanyInsertController extends Controller
 		$customer->PhoneNumber = $request->PhoneNumber;
 		$customer->Address = $request->Address;
 		echo $customer->save();
-}
+		
+
+
+return redirect()->back();
+
+	}
+	
 }

@@ -17,25 +17,9 @@ Route::get('/', function () {
     return View('pages.home');
 });
 
-Route::get('/login', function(){
-	return View::make('pages.login');
-	});
-
-Route::get('/register', function(){
-	return View::make('pages.register');
-});
-
-Route::get('/signup', function(){
-	return View::make('pages.signup');
-});
-Route::get('/createcompany', function(){
-	return View::make('pages.createcompany');
-});
-Route::post('/create', function(){
-	return View::make('pages.create');
-});
-Route::view('form','pages.insertcompany');
+Route::view('/createcompany','pages.insertcompany');
 Route::post('submit', 'App\Http\Controllers\CompanyInsertController@save');
+
 
 Route::get('/customers', function(){
 $customer = DB::table('customers')->latest()->get();

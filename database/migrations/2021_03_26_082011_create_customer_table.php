@@ -20,7 +20,7 @@ class CreateCustomerTable extends Migration
 			$table->string('LastName');
 			$table->string('PhoneNumber')->unique();
 			$table->mediumtext('Address');
-            $table->timestamps();
+			$table->timestamps();
         });
     }
 
