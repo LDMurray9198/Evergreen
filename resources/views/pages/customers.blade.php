@@ -4,7 +4,7 @@
 	
 <ul>
 	@foreach($customer as $customer)
-		<li><a href="/customer/{{ $customer->id }}">{{$customer->CompanyName}}</a></li>
+		<li><a href="/customers/{{ $customer->id }}">{{$customer->CompanyName}}</a></li>
 		@endforeach
 	</ul>
 @stop

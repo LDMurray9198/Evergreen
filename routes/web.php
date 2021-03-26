@@ -33,9 +33,9 @@ $customer = DB::table('customers')->latest()->get();
 	return View::make('pages.customers',['customer' => $customer]);
 });
 
-Route::get('/customers/{id}', function(){
+Route::get('/customers/{id}', function($id){
 $customer = DB::table('customers')->find($id);
-	return View::make('pages.customers',['customer' => $customer]);
+	return View::make('pages.details',['customer' => $customer]);
 });
 
 
